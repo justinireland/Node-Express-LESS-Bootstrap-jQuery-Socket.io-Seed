@@ -21,11 +21,15 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
-io.on('connection', function(){
-    console.log('Client connected');
-});
 server.listen(port,function(){
     console.log('HTTP server listening on port ' + port);
 });
 
+// Socket.io bindings
+io.on('connection', function(socket){
+    console.log('Client connected');
 
+    socket.on('disconnect', function(){
+        console.log('Client disconnected');
+    });
+});
