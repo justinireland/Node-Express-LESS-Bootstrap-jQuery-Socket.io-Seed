@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        title= config.app.title
+
+        // Stylesheets
+        link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+        // Scripts
+        script(src='libs/jquery.min.js')
+        script(src='libs/bootstrap/js/bootstrap.min.js')
+        script(src='libs/socket.io.js')
+
+    body
+        block content
